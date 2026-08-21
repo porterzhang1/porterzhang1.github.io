@@ -146,6 +146,10 @@
   #contact{background:var(--ink);color:#fff;position:relative;overflow:hidden}
   #contact::before{content:"";position:absolute;top:-120px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(37,99,235,.18),transparent 70%);pointer-events:none}
   #contact .section-tag{color:#93c5fd}
+  #contact .section-tag-row{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+  #contact .section-tag-row .section-tag{margin-bottom:0}
+  #contact .tag-line{flex:1;height:3px;background:#ef4444;border-radius:2px}
+  #contact .contact-bottom-line{height:3px;background:#ef4444;border-radius:2px;margin-top:26px}
   #contact .section-title{color:#fff}
   #contact .section-desc{color:#94a3b8}
   .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:stretch}
@@ -509,7 +513,10 @@
 <section id="contact">
   <div class="container">
     <div class="section-head reveal">
-      <span class="section-tag">Contact</span>
+      <div class="section-tag-row">
+        <span class="section-tag">Contact</span>
+        <div class="tag-line"></div>
+      </div>
       <h2 class="section-title">保持联系</h2>
       <p class="section-desc">无论是产品合作、行业交流，还是想聊聊职业发展，都欢迎找我聊聊。</p>
     </div>
@@ -548,6 +555,7 @@
         <p class="form-note" id="formNote">提交后会通过邮件发给我，通常 24 小时内回复。</p>
       </form>
     </div>
+    <div class="contact-bottom-line"></div>
   </div>
 </section>
 
