@@ -148,23 +148,23 @@
   #contact .section-tag{color:#93c5fd}
   #contact .section-title{color:#fff}
   #contact .section-desc{color:#94a3b8}
-  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
-  .contact-left{display:flex;flex-direction:column;gap:22px;padding-top:6px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:stretch}
+  #contact .section-head{max-width:calc((100% - 48px) / 2.1)}
+  .contact-left{display:flex;flex-direction:column;gap:22px}
   .contact-intro{color:#cbd5e1;font-size:15.5px;line-height:1.85;margin:0;max-width:440px}
   .contact-intro b{color:#fff;font-weight:600}
-  .contact-methods{display:flex;flex-direction:column;gap:12px}
+  .contact-methods{display:flex;flex-direction:column;gap:12px;flex:1}
+  .contact-methods .cm{flex:1}
   .cm{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:18px 22px;transition:.2s}
   .cm:hover{background:rgba(255,255,255,.09);border-color:rgba(96,165,250,.4);transform:translateY(-1px)}
   .cm .ico{width:44px;height:44px;flex:none;border-radius:11px;background:linear-gradient(135deg,rgba(37,99,235,.32),rgba(96,165,250,.18));color:#93c5fd;display:flex;align-items:center;justify-content:center}
   .cm b{display:block;font-size:15px;font-weight:600}
   .cm small{font-size:13.5px;color:#94a3b8;display:block;margin-top:2px}
-  .contact-status{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;color:#94a3b8;padding:10px 16px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.22);border-radius:999px;align-self:flex-start;margin-top:auto}
-  .contact-status .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.22);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.22)}50%{box-shadow:0 0 0 9px rgba(34,197,94,0)}}
   .form{display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:14px 20px 14px;backdrop-filter:blur(6px)}
-  .form-head{margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:baseline;gap:8px;justify-content:space-between}
-  .form-head b{color:#fff;font-size:14px;font-weight:600;letter-spacing:.2px}
-  .form-head .form-note-inline{font-size:11.5px;color:#64748b;font-weight:400}
+  .form-head{margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .form-head b{display:block;color:#fff;font-size:14px;font-weight:600;letter-spacing:.2px}
+  .form-head span{display:block;font-size:11.5px;color:#64748b;margin-top:2px}
   .form label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .form input,.form textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:9px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none;transition:.2s;width:100%}
   .form input:focus,.form textarea:focus{border-color:#60a5fa;background:rgba(255,255,255,.09)}
@@ -526,12 +526,11 @@
             <span><b>电话 / 微信</b><small>136****0593</small></span>
           </a>
         </div>
-        <span class="contact-status"><span class="dot"></span>当前可接洽新合作 · 通常 24 小时内回复</span>
       </div>
       <form class="form reveal" id="contactForm">
         <div class="form-head">
           <b>直接发个消息</b>
-          <span class="form-note-inline">通常 24 小时内回复</span>
+          <span>填写下方表单，提交后我会收到邮件提醒。</span>
         </div>
         <div>
           <label for="f-name">你的称呼</label>
